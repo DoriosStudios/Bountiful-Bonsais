@@ -1,0 +1,60 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Dorios Studios"
+		],
+		"product_type": "addon"
+	},
+	"header": {
+		"name": "Bountiful Bonsais",
+		"description": "v2.5.0",
+		"min_engine_version": [
+			1,
+			21,
+			80
+		],
+		"uuid": "a3c4cff5-d5be-44fc-b67b-ef055b06f1db",
+		"version": [
+			1,
+			0,
+			1
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "55f3b17f-35c4-48ae-8719-b5cd97112f41",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "6f3452c6-a42e-40a4-bff6-24b044c0f8ac",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "54b4a401-b9e5-48bd-adb8-71739e65b428",
+			"version": [
+				1,
+				0,
+				1
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.2.0"
+		}
+	]
+}

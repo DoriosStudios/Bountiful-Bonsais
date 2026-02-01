@@ -1,0 +1,71 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Bountiful Bonsais",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"utilitycraft_bonsai": {
+			"textures": "textures/blocks/bonsais/bonsai"
+		},
+		"utilitycraft_bonsai_grass": {
+			"textures": "textures/blocks/bonsais/bonsai_grass"
+		},
+		"utilitycraft_bonsai_dirt": {
+			"textures": "textures/blocks/bonsais/bonsai_dirt"
+		},
+		"utilitycraft_bonsai_sand": {
+			"textures": "textures/blocks/bonsais/bonsai_sand"
+		},
+		"utilitycraft_bonsai_redsand": {
+			"textures": "textures/blocks/bonsais/bonsai_redsand"
+		},
+		"utilitycraft_bonsai_warped": {
+			"textures": "textures/blocks/bonsais/bonsai_warped"
+		},
+		"utilitycraft_bonsai_crimson": {
+			"textures": "textures/blocks/bonsais/bonsai_crimson"
+		},
+		"utilitycraft_bonsai_soulsand": {
+			"textures": "textures/blocks/bonsais/bonsai_soulsand"
+		},
+		"utilitycraft_bonsai_endstone": {
+			"textures": "textures/blocks/bonsais/bonsai_endstone"
+		},
+		"utilitycraft_bonsai_grass_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_grass_farm"
+		},
+		"utilitycraft_bonsai_dirt_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_dirt_farm"
+		},
+		"utilitycraft_bonsai_sand_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_sand_farm"
+		},
+		"utilitycraft_bonsai_redsand_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_redsand_farm"
+		},
+		"utilitycraft_bonsai_warped_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_warped_farm"
+		},
+		"utilitycraft_bonsai_crimson_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_crimson_farm"
+		},
+		"utilitycraft_bonsai_soulsand_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_soulsand_farm"
+		},
+		"utilitycraft_bonsai_endstone_farm": {
+			"textures": "textures/blocks/bonsais/bonsai_endstone_farm"
+		},
+		"utilitycraft_bonsai_soil_1": {
+			"textures": "textures/blocks/bonsais/bonsai_soil_1"
+		},
+		"utilitycraft_bonsai_soil_2": {
+			"textures": "textures/blocks/bonsais/bonsai_soil_2"
+		},
+		"utilitycraft_bonsai_soil_3": {
+			"textures": "textures/blocks/bonsais/bonsai_soil_3"
+		},
+		"utilitycraft_bonsai_soil_4": {
+			"textures": "textures/blocks/bonsais/bonsai_soil_4"
+		}
+	}
+}
