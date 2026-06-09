@@ -11,8 +11,8 @@
 		"description": "v2.5.0",
 		"min_engine_version": [
 			1,
-			21,
-			80
+			20,
+			0
 		],
 		"uuid": "54b4a401-b9e5-48bd-adb8-71739e65b428",
 		"version": [
