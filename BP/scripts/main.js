@@ -1,3 +1,5 @@
-import './DoriosAPI/main.js'
+import * as DoriosLib from './DoriosLib/index.js'
+import './blocks/bonsai/bonsai.js'
 
-import './bonsai.js'
+DoriosLib.registry.install()
+DoriosLib.container.initialize()

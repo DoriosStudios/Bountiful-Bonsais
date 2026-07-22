@@ -1,57 +1,76 @@
-import { system } from "@minecraft/server"
-
 /**
- * Bonsai definitions registry.
- * Each entry defines sapling behavior and crop drop data.
- *
- * @constant
- * @type {{
- *   bonsaiItems: Array<{ sapling: string, allowed: string[], entity: string }>,
- *   plantsData: Record<string, { cost: number, drops: Array<{ item: string, amount: number|number[], chance: number }> }>
- * }}
- */
-export const bonsaiItems = [
-    { sapling: 'minecraft:acacia_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:acacia_tree' },
-    { sapling: 'utilitycraft:apple_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:apple_tree' },
-    { sapling: 'minecraft:bamboo', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:bamboo' },
-    { sapling: 'minecraft:beetroot_seeds', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:beetroot' },
-    { sapling: 'minecraft:birch_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:birch_tree' },
-    { sapling: 'minecraft:cactus', allowed: ['sand', 'red_sand'], entity: 'utilitycraft:cactus' },
-    { sapling: 'minecraft:carrot', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:carrot' },
-    { sapling: 'minecraft:cherry_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:cherry_tree' },
-    { sapling: 'minecraft:chorus_fruit', allowed: ['end_stone'], entity: 'utilitycraft:chorus_fruit' },
-    { sapling: 'minecraft:crimson_fungus', allowed: ['crimson_nylium'], entity: 'utilitycraft:crimson_tree' },
-    { sapling: 'minecraft:dark_oak_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:darkoak_tree' },
-    { sapling: 'minecraft:jungle_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:jungle_tree' },
-    { sapling: 'minecraft:kelp', allowed: ['sand', 'red_sand', 'dirt', 'grass_block'], entity: 'utilitycraft:kelp' },
-    { sapling: 'minecraft:mangrove_propagule', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:mangrove_tree' },
-    { sapling: 'minecraft:melon_seeds', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:melon' },
-    { sapling: 'minecraft:red_mushroom', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:mushroom' },
-    { sapling: 'minecraft:brown_mushroom', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:mushroom' },
-    { sapling: 'minecraft:nether_wart', allowed: ['soul_sand'], entity: 'utilitycraft:nether_wart' },
-    { sapling: 'minecraft:oak_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:oak_tree' },
-    { sapling: 'minecraft:pale_oak_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:pale_oak_tree' },
-    { sapling: 'minecraft:potato', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:potato' },
-    { sapling: 'minecraft:pumpkin_seeds', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:pumpkin' },
-    { sapling: 'minecraft:spruce_sapling', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:spruce_tree' },
-    { sapling: 'minecraft:sugar_cane', allowed: ['dirt', 'grass_block', 'sand', 'red_sand'], entity: 'utilitycraft:sugarcane' },
-    { sapling: 'minecraft:sweet_berries', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:sweet_berries' },
-    { sapling: 'minecraft:warped_fungus', allowed: ['warped_nylium'], entity: 'utilitycraft:warped_tree' },
-    { sapling: 'minecraft:wheat_seeds', allowed: ['dirt', 'grass_block'], entity: 'utilitycraft:wheat' }
-]
-
+* Crop data: defines seed item and loot table for each custom crop.
+*/
+export const data = {
+    'utilitycraft:coal_crop': { seed: 'utilitycraft:coal_seeds', loot: 'bountiful_crops/coalLoot/coal_crop' },
+    'utilitycraft:copper_crop': { seed: 'utilitycraft:copper_seeds', loot: 'bountiful_crops/copperLoot/copper_crop' },
+    'utilitycraft:dyes_crop': { seed: 'utilitycraft:dyes_seeds', loot: 'bountiful_crops/dyesLoot/dyes_crop' },
+    'utilitycraft:glass_crop': { seed: 'utilitycraft:glass_seeds', loot: 'bountiful_crops/glassLoot/glass_crop' },
+    'utilitycraft:gunpowder_crop': { seed: 'utilitycraft:gunpowder_seeds', loot: 'bountiful_crops/gunpowderLoot/gunpowder_crop' },
+    'utilitycraft:iron_crop': { seed: 'utilitycraft:iron_seeds', loot: 'bountiful_crops/ironLoot/iron_crop' },
+    'utilitycraft:leather_crop': { seed: 'utilitycraft:leather_seeds', loot: 'bountiful_crops/leatherLoot/leather_crop' },
+    'utilitycraft:prismarine_crystal_crop': { seed: 'utilitycraft:prismarine_crystals_seeds', loot: 'bountiful_crops/prismarineCRLoot/prismarine_crystals_crop' },
+    'utilitycraft:prismarine_shards_crop': { seed: 'utilitycraft:prismarine_shards_seeds', loot: 'bountiful_crops/prismarineSHLoot/prismarine_shards_crop' },
+    'utilitycraft:water_crop': { seed: 'utilitycraft:water_seeds', loot: 'bountiful_crops/waterLoot/water_crop' },
+    'utilitycraft:wool_crop': { seed: 'utilitycraft:wool_seeds', loot: 'bountiful_crops/woolLoot/wool_crop' },
+    'utilitycraft:ghast_crop': { seed: 'utilitycraft:ghast_seeds', loot: 'bountiful_crops/ghastLoot/ghast_tear_crop' },
+    'utilitycraft:glowstone_crop': { seed: 'utilitycraft:glowstone_seeds', loot: 'bountiful_crops/glowstoneLoot/glowstone_crop' },
+    'utilitycraft:gold_crop': { seed: 'utilitycraft:gold_seeds', loot: 'bountiful_crops/goldLoot/gold_crop' },
+    'utilitycraft:honey_crop': { seed: 'utilitycraft:honey_seeds', loot: 'bountiful_crops/honeyLoot/honey_crop' },
+    'utilitycraft:lapis_crop': { seed: 'utilitycraft:lapis_seeds', loot: 'bountiful_crops/lapisLoot/lapis_crop' },
+    'utilitycraft:lava_crop': { seed: 'utilitycraft:lava_seeds', loot: 'bountiful_crops/lavaLoot/lava_crop' },
+    'utilitycraft:quartz_crop': { seed: 'utilitycraft:quartz_seeds', loot: 'bountiful_crops/quartzLoot/quartz_crop' },
+    'utilitycraft:redstone_crop': { seed: 'utilitycraft:redstone_seeds', loot: 'bountiful_crops/redstoneLoot/redstone_crop' },
+    'utilitycraft:slime_crop': { seed: 'utilitycraft:slime_seeds', loot: 'bountiful_crops/slimeLoot/slime_crop' },
+    'utilitycraft:resin_crop': { seed: 'utilitycraft:resin_seeds', loot: 'bountiful_crops/resinLoot/resin_crop' },
+    'utilitycraft:amethyst_crop': { seed: 'utilitycraft:amethyst_seeds', loot: 'bountiful_crops/amethystLoot/amethyst_crop' },
+    'utilitycraft:blaze_crop': { seed: 'utilitycraft:blaze_seeds', loot: 'bountiful_crops/blazeLoot/blaze_crop' },
+    'utilitycraft:diamond_crop': { seed: 'utilitycraft:diamond_seeds', loot: 'bountiful_crops/diamondLoot/diamond_crop' },
+    'utilitycraft:emerald_crop': { seed: 'utilitycraft:emerald_seeds', loot: 'bountiful_crops/emeraldLoot/emerald_crop' },
+    'utilitycraft:enderpearl_crop': { seed: 'utilitycraft:enderpearl_seeds', loot: 'bountiful_crops/enderpearlLoot/enderpearl_crop' },
+    'utilitycraft:obsidian_crop': { seed: 'utilitycraft:obsidian_seeds', loot: 'bountiful_crops/obsidianLoot/obsidian_crop' },
+    'utilitycraft:netherite_crop': { seed: 'utilitycraft:netherite_seeds', loot: 'bountiful_crops/netheriteLoot/netherite_crop' },
+    'utilitycraft:netherstar_crop': { seed: 'utilitycraft:nether_star_seeds', loot: 'bountiful_crops/netherstarLoot/netherstar_crop' },
+    'utilitycraft:shulker_crop': { seed: 'utilitycraft:shulker_seeds', loot: 'bountiful_crops/shulkerLoot/shulker_crop' },
+    'utilitycraft:totem_crop': { seed: 'utilitycraft:totem_seeds', loot: 'bountiful_crops/totemLoot/totem_crop' },
+    'utilitycraft:wither_crop': { seed: 'utilitycraft:wither_seeds', loot: 'bountiful_crops/witherLoot/wither_crop' }
+}
 
 /**
  * Plant registry for UtilityCraft and Bountiful Crops.
  *
- * Each key represents a plant identifier, and its value specifies
- * the seed item, loot table, and other properties.
+ * Each key is the input item type ID consumed by plant machinery.
+ * `cost` and `drops` remain the shared Seed Synthesizer contract.
+ * Entries with `bonsai` are indexed by plantRegistry.js for O(1)
+ * planting/entity lookups without changing that shared contract.
  *
  * @constant
- * @type {Record<string, { seed: string, loot: string }>}
+ * @type {Record<string, {
+ *   cost: number,
+ *   drops: Array<{item: string, amount: number|number[], chance: number}>,
+ *   bonsai?: {
+ *     entityTypeId: string,
+ *     allowedSoils: string[],
+ *     durationTicks: number,
+ *     speedMultiplier?: number,
+ *     yieldMultiplier?: number,
+ *     modifiers?: {
+ *       soilSpeed?: boolean,
+ *       soilYield?: boolean,
+ *       tillingSpeed?: boolean
+ *     }
+ *   }
+ * }>}
  */
 export const plantsData = {
     'minecraft:acacia_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:acacia_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:acacia_log', amount: [6, 10], chance: 1 },
@@ -60,7 +79,49 @@ export const plantsData = {
             { item: 'minecraft:acacia_sapling', amount: 1, chance: 0.05 }
         ]
     },
+    'minecraft:azalea': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:azalea_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
+        cost: 8000,
+        drops: [
+            { item: 'minecraft:oak_log', amount: [4, 9], chance: 1 },
+            { item: 'minecraft:azalea_leaves', amount: [2, 5], chance: 1 },
+            { item: 'minecraft:stick', amount: [6, 8], chance: 1 },
+            { item: 'minecraft:azalea', amount: [1, 2], chance: 0.1 },
+            { item: 'minecraft:flowering_azalea', amount: 1, chance: 0.02 }
+        ]
+    },
+    'minecraft:flowering_azalea': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:azalea_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
+        cost: 8000,
+        drops: [
+            { item: 'minecraft:oak_log', amount: [4, 9], chance: 1 },
+            { item: 'minecraft:flowering_azalea_leaves', amount: [2, 5], chance: 1 },
+            { item: 'minecraft:stick', amount: [6, 8], chance: 1 },
+            { item: 'minecraft:flowering_azalea', amount: [1, 2], chance: 0.2 },
+            { item: 'minecraft:spore_flower', amount: 1, chance: 0.05 }
+        ]
+    },
+
     'utilitycraft:apple_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:apple_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:log', amount: [6, 10], chance: 1 },
@@ -73,12 +134,26 @@ export const plantsData = {
         ]
     },
     'minecraft:bamboo': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:bamboo',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:bamboo', amount: [4, 8], chance: 1 }
         ]
     },
     'minecraft:beetroot_seeds': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:beetroot',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:beetroot', amount: [2, 4], chance: 1 },
@@ -86,6 +161,13 @@ export const plantsData = {
         ]
     },
     'minecraft:birch_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:birch_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:birch_log', amount: [6, 10], chance: 1 },
@@ -95,12 +177,26 @@ export const plantsData = {
         ]
     },
     'minecraft:cactus': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:cactus',
+            allowedSoils: ["minecraft:sand","minecraft:red_sand"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:cactus', amount: [2, 4], chance: 1 }
         ]
     },
     'minecraft:carrot': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:carrot',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:carrot', amount: [2, 4], chance: 1 },
@@ -108,12 +204,32 @@ export const plantsData = {
         ]
     },
     'minecraft:cherry_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:cherry_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:cherry_log', amount: [6, 10], chance: 1 },
             { item: 'minecraft:cherry_leaves', amount: [0, 4], chance: 1 },
             { item: 'minecraft:stick', amount: [0, 6], chance: 1 },
             { item: 'minecraft:cherry_sapling', amount: 1, chance: 0.05 }
+        ]
+    },
+    'minecraft:chorus_fruit': {
+        bonsai: {
+            entityTypeId: 'utilitycraft:chorus_fruit',
+            allowedSoils: ["minecraft:end_stone"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
+        cost: 8000,
+        drops: [
+            { item: 'minecraft:chorus_fruit', amount: [1, 2], chance: 1 },
+            { item: 'minecraft:chorus_flower', amount: 1, chance: 0.05 }
         ]
     },
     'minecraft:chorus_flower': {
@@ -124,6 +240,13 @@ export const plantsData = {
         ]
     },
     'minecraft:crimson_fungus': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:crimson_tree',
+            allowedSoils: ["minecraft:crimson_nylium"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:crimson_stem', amount: [6, 10], chance: 1 },
@@ -134,6 +257,13 @@ export const plantsData = {
         ]
     },
     'minecraft:dark_oak_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:darkoak_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:dark_oak_log', amount: [6, 10], chance: 1 },
@@ -143,6 +273,13 @@ export const plantsData = {
         ]
     },
     'minecraft:jungle_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:jungle_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:jungle_log', amount: [6, 10], chance: 1 },
@@ -153,12 +290,26 @@ export const plantsData = {
         ]
     },
     'minecraft:kelp': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:kelp',
+            allowedSoils: ["minecraft:sand","minecraft:red_sand","minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:kelp', amount: [4, 8], chance: 1 }
         ]
     },
     'minecraft:mangrove_propagule': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:mangrove_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:mangrove_log', amount: [6, 10], chance: 1 },
@@ -168,6 +319,13 @@ export const plantsData = {
         ]
     },
     'minecraft:melon_seeds': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:melon',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:melon_slice', amount: [2, 4], chance: 1 },
@@ -175,24 +333,52 @@ export const plantsData = {
         ]
     },
     'minecraft:red_mushroom': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:mushroom',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:red_mushroom', amount: [2, 4], chance: 1 }
         ]
     },
     'minecraft:brown_mushroom': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:mushroom',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:brown_mushroom', amount: [2, 4], chance: 1 }
         ]
     },
     'minecraft:nether_wart': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:nether_wart',
+            allowedSoils: ["minecraft:soul_sand"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:nether_wart', amount: [4, 8], chance: 1 }
         ]
     },
     'minecraft:oak_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:oak_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:log', amount: [6, 10], chance: 1 },
@@ -202,15 +388,30 @@ export const plantsData = {
         ]
     },
     'minecraft:pale_oak_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:pale_oak_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:pale_oak_log', amount: [6, 10], chance: 1 },
             { item: 'minecraft:pale_oak_leaves', amount: [0, 4], chance: 1 },
             { item: 'minecraft:stick', amount: [0, 6], chance: 1 },
+            { item: 'minecraft:resin_clump', amount: [1, 2], chance: 0.03 },
             { item: 'minecraft:pale_oak_sapling', amount: 1, chance: 0.05 }
         ]
     },
     'minecraft:potato': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:potato',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:potato', amount: [2, 4], chance: 1 },
@@ -218,6 +419,13 @@ export const plantsData = {
         ]
     },
     'minecraft:pumpkin_seeds': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:pumpkin',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:pumpkin', amount: [2, 4], chance: 1 },
@@ -225,6 +433,13 @@ export const plantsData = {
         ]
     },
     'minecraft:spruce_sapling': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:spruce_tree',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:spruce_log', amount: [6, 10], chance: 1 },
@@ -234,18 +449,39 @@ export const plantsData = {
         ]
     },
     'minecraft:sugar_cane': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:sugarcane',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block","minecraft:sand","minecraft:red_sand"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:sugar_cane', amount: [4, 8], chance: 1 }
         ]
     },
     'minecraft:sweet_berries': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:sweet_berries',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:sweet_berries', amount: [2, 4], chance: 1 }
         ]
     },
     'minecraft:warped_fungus': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:warped_tree',
+            allowedSoils: ["minecraft:warped_nylium"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:warped_stem', amount: [6, 10], chance: 1 },
@@ -256,6 +492,13 @@ export const plantsData = {
         ]
     },
     'minecraft:wheat_seeds': {
+
+        bonsai: {
+            entityTypeId: 'utilitycraft:wheat',
+            allowedSoils: ["minecraft:dirt","minecraft:grass_block"],
+            durationTicks: 1200,
+            yieldMultiplier: 1
+        },
         cost: 8000,
         drops: [
             { item: 'minecraft:wheat', amount: [2, 4], chance: 1 },
@@ -435,14 +678,14 @@ export const plantsData = {
     'utilitycraft:diamond_seeds': {
         cost: 512000,
         drops: [
-            { item: 'minecraft:diamond', amount: 1, chance: 1 },
+            { item: 'utilitycraft:diamond_shard', amount: 1, chance: 1 },
             { item: 'utilitycraft:diamond_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'utilitycraft:emerald_seeds': {
         cost: 512000,
         drops: [
-            { item: 'minecraft:emerald', amount: 1, chance: 1 },
+            { item: 'utilitycraft:emerald_shard', amount: 1, chance: 1 },
             { item: 'utilitycraft:emerald_seeds', amount: 1, chance: 0.05 }
         ]
     },
@@ -463,36 +706,43 @@ export const plantsData = {
     'utilitycraft:netherite_seeds': {
         cost: 1024000,
         drops: [
-            { item: 'minecraft:netherite_scrap', amount: 1, chance: 1 },
+            { item: 'utilitycraft:netherite_nugget', amount: 1, chance: 1 },
             { item: 'utilitycraft:netherite_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'utilitycraft:nether_star_seeds': {
         cost: 1024000,
         drops: [
-            { item: 'minecraft:nether_star', amount: 1, chance: 1 },
+            { item: 'utilitycraft:nether_star_fragment', amount: 1, chance: 1 },
             { item: 'utilitycraft:nether_star_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'utilitycraft:shulker_seeds': {
         cost: 1024000,
         drops: [
-            { item: 'minecraft:shulker_shell', amount: 1, chance: 1 },
+            { item: 'utilitycraft:shulker_shell_shard', amount: 1, chance: 1 },
             { item: 'utilitycraft:shulker_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'utilitycraft:totem_seeds': {
         cost: 1024000,
         drops: [
-            { item: 'minecraft:totem_of_undying', amount: 1, chance: 1 },
+            { item: 'utilitycraft:totem_shard', amount: 1, chance: 1 },
             { item: 'utilitycraft:totem_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'utilitycraft:wither_seeds': {
         cost: 1024000,
         drops: [
-            { item: 'minecraft:wither_skeleton_skull', amount: 1, chance: 1 },
+            { item: 'utilitycraft:wither_skull_shard', amount: 1, chance: 1 },
             { item: 'utilitycraft:wither_seeds', amount: 1, chance: 0.05 }
+        ]
+    },
+    'utilitycraft:resin_seeds': {
+        cost: 128000,
+        drops: [
+            { item: 'minecraft:resin_clump', amount: [1, 2], chance: 1 },
+            { item: 'utilitycraft:resin_seeds', amount: 1, chance: 0.05 }
         ]
     },
     'minecraft:poppy': {
@@ -526,195 +776,3 @@ export const plantsData = {
         ]
     }
 }
-
-/**
- * ScriptEvent receiver: "utilitycraft:register_plant"
- *
- * Allows other addons or scripts to dynamically add or replace plant definitions.
- * If the item already exists in `plantsData`, it will be replaced.
- *
- * Expected payload format (JSON):
- * ```json
- * {
- *   "utilitycraft:coal_crop": {
- *     "cost": 64000,
- *     "drops": [
- *       { "item": "minecraft:coal", "amount": [2, 4], "chance": 1 },
- *       { "item": "utilitycraft:coal_seeds", "amount": 1, "chance": 0.05 }
- *     ]
- *   },
- *   "utilitycraft:gold_crop": {
- *     "cost": 64000,
- *     "drops": [
- *       { "item": "minecraft:raw_gold", "amount": [1, 3], "chance": 1 },
- *       { "item": "utilitycraft:gold_seeds", "amount": 1, "chance": 0.05 }
- *     ]
- *   }
- * }
- * ```
- */
-system.afterEvents.scriptEventReceive.subscribe(({ id, message }) => {
-    if (id !== "utilitycraft:register_plant") return
-
-    try {
-        const payload = JSON.parse(message)
-        if (!payload || typeof payload !== "object") return
-
-        let added = 0
-        let replaced = 0
-
-        for (const [plantId, data] of Object.entries(payload)) {
-            if (!data.drops || !Array.isArray(data.drops)) continue
-
-            if (plantsData[plantId]) {
-                // console.warn(`[UtilityCraft] Replaced existing plant drop definition for '${plantId}'.`)
-                replaced++
-            } else {
-                added++
-            }
-
-            plantsData[plantId] = data
-        }
-
-        // console.warn(`[UtilityCraft] Registered ${added} new and replaced ${replaced} plant drop definitions.`)
-    } catch (err) {
-        // console.warn("[UtilityCraft] Failed to parse plant registration payload:", err)
-    }
-})
-
-// ==================================================
-// EXAMPLES – How to register custom plant drops
-// ==================================================
-/*
-import { system, world } from "@minecraft/server";
-
-world.afterEvents.worldLoad.subscribe(() => {
-    const newPlants = {
-        "utilitycraft:coal_crop": {
-            cost: 64000,
-            drops: [
-                { item: "minecraft:coal", amount: [2, 4], chance: 1 },
-                { item: "utilitycraft:coal_seeds", amount: 1, chance: 0.05 }
-            ]
-        },
-        "utilitycraft:gold_crop": {
-            cost: 64000,
-            drops: [
-                { item: "minecraft:raw_gold", amount: [1, 3], chance: 1 },
-                { item: "utilitycraft:gold_seeds", amount: 1, chance: 0.05 }
-            ]
-        }
-    }
-
-    system.sendScriptEvent("utilitycraft:register_plant", JSON.stringify(newPlants))
-
-    console.warn("[Addon] Custom plant drops registered via system event.")
-})
-
-// You can also do this directly with a command inside Minecraft:
-Command:
-/scriptevent utilitycraft:register_plant {"utilitycraft:coal_crop":{"cost":64000,"drops":[{"item":"minecraft:coal","amount":[2,4],"chance":1},{"item":"utilitycraft:coal_seeds","amount":1,"chance":0.05}]},"utilitycraft:gold_crop":{"cost":64000,"drops":[{"item":"minecraft:raw_gold","amount":[1,3],"chance":1},{"item":"utilitycraft:gold_seeds","amount":1,"chance":0.05}]}}
-*/
-
-/**
- * ScriptEvent receiver: "utilitycraft:register_bonsai"
- *
- * Allows other addons or scripts to dynamically add or replace bonsai definitions.
- * If an existing sapling is found, it will be replaced.
- *
- * Expected payload format (JSON):
- * ```json
- * {
- *   "utilitycraft:example_bonsai": {
- *     "sapling": "minecraft:cactus",
- *     "allowed": ["sand", "red_sand"],
- *     "entity": "utilitycraft:cactus",
- *     "cost": 8000,
- *     "drops": [
- *       { "item": "minecraft:cactus", "amount": [2,4], "chance": 1 }
- *     ]
- *   }
- * }
- * ```
- *
- * Behavior:
- * - Bonsai data (sapling, allowed, entity) are stored in `bonsaiItems`.
- * - Cost and drops are stored in `plantsData` under the same identifier.
- * - Missing "allowed" defaults to ["dirt", "grass_block"].
- * - Existing entries are replaced and logged.
- */
-system.afterEvents.scriptEventReceive.subscribe(({ id, message }) => {
-    if (id !== "utilitycraft:register_bonsai") return
-
-    try {
-        const payload = JSON.parse(message)
-        if (!payload || typeof payload !== "object") return
-
-        let added = 0
-        let replaced = 0
-
-        for (const [bonsaiId, data] of Object.entries(payload)) {
-            const { sapling, allowed = ["dirt", "grass_block"], disableTimeBonus = false, disableYieldBonus = false, entity, cost, drops } = data
-            if (!sapling || !entity || !drops || !Array.isArray(drops)) continue
-
-            // Update bonsaiItems
-            const existing = bonsaiItems.find(b => b.sapling === sapling)
-            const newBonsai = { sapling, allowed, entity, disableTimeBonus, disableYieldBonus }
-
-            if (existing) {
-                Object.assign(existing, newBonsai)
-                replaced++
-            } else {
-                bonsaiItems.push(newBonsai)
-                added++
-            }
-
-            // Update plantsData
-            plantsData[sapling] = { cost, drops }
-
-            // console.warn(`${newBonsai.sapling}`)
-            // console.warn(`${JSON.stringify(plantsData[bonsaiId])}`)
-            // console.warn(`${JSON.stringify(newBonsai)}`)
-        }
-    } catch (err) {
-        console.warn("[UtilityCraft] Failed to parse bonsai registration payload:", err)
-    }
-})
-
-// ==================================================
-// EXAMPLES – How to register custom bonsais
-// ==================================================
-/*
-import { system, world } from "@minecraft/server";
-
-world.afterEvents.worldLoad.subscribe(() => {
-    const newBonsais = {
-        "utilitycraft:cactus_bonsai": {
-            sapling: "minecraft:cactus",
-            allowed: ["sand", "red_sand"],
-            entity: "utilitycraft:cactus",
-            cost: 8000,
-            drops: [
-                { item: "minecraft:cactus", amount: [2, 4], chance: 1 }
-            ]
-        },
-        "utilitycraft:oak_bonsai": {
-            sapling: "minecraft:oak_sapling",
-            entity: "utilitycraft:oak_tree",
-            cost: 8000,
-            drops: [
-                { item: "minecraft:log", amount: [4, 8], chance: 1 },
-                { item: "minecraft:stick", amount: [2, 4], chance: 1 }
-            ]
-        }
-    }
-
-    system.sendScriptEvent("utilitycraft:register_bonsai", JSON.stringify(newBonsais))
-
-    console.warn("[Addon] Custom bonsai definitions registered via system event.")
-})
-
-// You can also do this directly with a command inside Minecraft:
-Command:
-/scriptevent utilitycraft:register_bonsai {"utilitycraft:cactus_bonsai":{"sapling":"minecraft:cactus","allowed":["sand","red_sand"],"entity":"utilitycraft:cactus","cost":8000,"drops":[{"item":"minecraft:cactus","amount":[2,4],"chance":1}]},"utilitycraft:oak_bonsai":{"sapling":"minecraft:oak_sapling","entity":"utilitycraft:oak_tree","cost":8000,"drops":[{"item":"minecraft:log","amount":[4,8],"chance":1},{"item":"minecraft:stick","amount":[2,4],"chance":1}]}}
-*/
