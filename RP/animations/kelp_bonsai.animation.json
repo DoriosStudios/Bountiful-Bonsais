@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.utilitycraft_kelp.decorative_max": {
+			"loop": true,
+			"bones": {
+				"tree": {
+					"scale": [
+						7.5,
+						7.5,
+						7.5
+					]
+				}
+			}
+		}
+	}
+}

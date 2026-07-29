@@ -8,7 +8,7 @@
 	},
 	"header": {
 		"name": "Bountiful Bonsais",
-		"description": "v2.6.0",
+		"description": "v1.1.0",
 		"min_engine_version": [
 			1,
 			21,
@@ -16,8 +16,8 @@
 		],
 		"uuid": "a3c4cff5-d5be-44fc-b67b-ef055b06f1db",
 		"version": [
-			2,
-			6,
+			1,
+			1,
 			0
 		]
 	},
@@ -26,8 +26,8 @@
 			"type": "data",
 			"uuid": "55f3b17f-35c4-48ae-8719-b5cd97112f41",
 			"version": [
-				2,
-				6,
+				1,
+				1,
 				0
 			]
 		},
@@ -37,8 +37,8 @@
 			"uuid": "6f3452c6-a42e-40a4-bff6-24b044c0f8ac",
 			"entry": "scripts/main.js",
 			"version": [
-				2,
-				6,
+				1,
+				1,
 				0
 			]
 		}
@@ -47,8 +47,8 @@
 		{
 			"uuid": "54b4a401-b9e5-48bd-adb8-71739e65b428",
 			"version": [
-				2,
-				6,
+				1,
+				1,
 				0
 			]
 		},

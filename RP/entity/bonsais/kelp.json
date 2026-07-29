@@ -18,11 +18,15 @@
 			],
 			"animations": {
 				"controller": "controller.animation.utilitycraft_bonsai_dynamic",
-				"grow_dynamic": "animation.utilitycraft_bonsai.grow_dynamic"
+				"grow_dynamic": "animation.utilitycraft_bonsai.grow_dynamic",
+				"decorative_max": "animation.utilitycraft_kelp.decorative_max"
 			},
 			"scripts": {
 				"animate": [
-					"controller"
+					"controller",
+					{
+						"decorative_max": "q.property('dorios:is_slimed')"
+					}
 				]
 			}
 		}
