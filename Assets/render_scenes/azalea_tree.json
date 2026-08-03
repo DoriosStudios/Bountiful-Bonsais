@@ -22,10 +22,7 @@
                                     ],
                        "bone_scales":  [
                                            "Tree=1.875,1.875,1.875"
-                                       ],
-                       "object_positions":  [
-                                                "Bone:Log:cube_0=2,7,0"
-                                            ]
+                                       ]
                    }
                ]
 }
