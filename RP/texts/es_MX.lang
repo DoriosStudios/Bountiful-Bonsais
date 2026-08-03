@@ -1,5 +1,5 @@
-tile.utilitycraft:bonsai.name=Bonsái
-item.utilitycraft:apple_sapling=Retoño de Manzano
+tile.utilitycraft:bonsai.name=Bonsái\n§o§9@Bountiful Bonsais
+item.utilitycraft:apple_sapling=Retoño de Manzano\n§o§9@Bountiful Bonsais
 entity.utilitycraft:acacia_tree.name=Bonsái de acacia
 entity.utilitycraft:apple_tree.name=Bonsái de manzano
 entity.utilitycraft:bamboo.name=Bonsái de bambú

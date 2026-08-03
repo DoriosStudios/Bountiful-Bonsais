@@ -1,5 +1,5 @@
-tile.utilitycraft:bonsai.name=Bonsai
-item.utilitycraft:apple_sapling=Muda de Macieira
+tile.utilitycraft:bonsai.name=Bonsai\n§o§9@Bountiful Bonsais
+item.utilitycraft:apple_sapling=Muda de Macieira\n§o§9@Bountiful Bonsais
 entity.utilitycraft:acacia_tree.name=Bonsai de Acácia
 entity.utilitycraft:apple_tree.name=Bonsai de Macieira
 entity.utilitycraft:bamboo.name=Bonsai de Bambu
