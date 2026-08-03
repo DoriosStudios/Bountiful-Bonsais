@@ -1,0 +1,28 @@
+﻿{
+    "blocks":  [
+                   {
+                       "name":  "bonsai_bonsai_crimson",
+                       "model":  "../../RP/models/blocks/bonsai.geo.json",
+                       "textures":  "../../RP/textures/blocks/bonsais/bonsai_crimson.png",
+                       "position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                   },
+                   {
+                       "name":  "crimson_tree",
+                       "model":  "../../RP/models/entity/bonsais/nether_tree.geo.json",
+                       "geometry":  "geometry.utilitycraft_nether_tree",
+                       "textures":  "../../RP/textures/entity/crimson_tree.png",
+                       "position":  [
+                                        0,
+                                        0.172,
+                                        0
+                                    ],
+                       "bone_scales":  [
+                                           "Tree=1.875,1.875,1.875"
+                                       ]
+                   }
+               ]
+}

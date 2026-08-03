@@ -1,0 +1,28 @@
+﻿{
+    "blocks":  [
+                   {
+                       "name":  "bonsai_bonsai_endstone",
+                       "model":  "../../RP/models/blocks/bonsai.geo.json",
+                       "textures":  "../../RP/textures/blocks/bonsais/bonsai_endstone.png",
+                       "position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                   },
+                   {
+                       "name":  "chorus_fruit_tree",
+                       "model":  "../../RP/models/entity/bonsais/block_bonsai.geo.json",
+                       "geometry":  "geometry.utilitycraft_block_bonsai",
+                       "textures":  "../../RP/textures/entity/chorus_flower.png",
+                       "position":  [
+                                        0,
+                                        0.172,
+                                        0
+                                    ],
+                       "bone_scales":  [
+                                           "Tree=1.875,1.875,1.875"
+                                       ]
+                   }
+               ]
+}

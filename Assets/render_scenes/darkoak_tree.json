@@ -1,0 +1,28 @@
+﻿{
+    "blocks":  [
+                   {
+                       "name":  "bonsai_bonsai_grass",
+                       "model":  "../../RP/models/blocks/bonsai.geo.json",
+                       "textures":  "../../RP/textures/blocks/bonsais/bonsai_grass.png",
+                       "position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                   },
+                   {
+                       "name":  "darkoak_tree",
+                       "model":  "../../RP/models/entity/bonsais/dark_oak_tree.geo.json",
+                       "geometry":  "geometry.utilitycraft_darkoak_tree",
+                       "textures":  "../../RP/textures/entity/dark_oak_tree.png",
+                       "position":  [
+                                        0,
+                                        0.172,
+                                        0
+                                    ],
+                       "bone_scales":  [
+                                           "Tree=1.875,1.875,1.875"
+                                       ]
+                   }
+               ]
+}

@@ -1,0 +1,29 @@
+﻿{
+    "blocks":  [
+                   {
+                       "name":  "bonsai_bonsai_grass",
+                       "model":  "../../RP/models/blocks/bonsai.geo.json",
+                       "textures":  "../../RP/textures/blocks/bonsais/bonsai_grass.png",
+                       "position":  [
+                                        0,
+                                        0,
+                                        0
+                                    ]
+                   },
+                   {
+                       "name":  "kelp",
+                       "model":  "../../RP/models/entity/bonsais/kelp.geo.json",
+                       "geometry":  "geometry.utilitycraft_kelp",
+                       "textures":  "../../RP/textures/entity/kelp.png",
+                       "position":  [
+                                        0,
+                                        0.172,
+                                        0
+                                    ],
+                       "bone_scales":  [
+                                           "Tree=1.875,1.875,1.875",
+                                           "bb_main=0.25,0.25,0.25"
+                                       ]
+                   }
+               ]
+}
